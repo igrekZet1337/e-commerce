@@ -1,28 +1,2 @@
-<form #form="ngForm" class="form-template-driven" ngNativeValidate (ngSubmit)="onSubmit(form)">
-
-    <div class="form form__group">
-        <label for="name">First Name</label>
-        <input 
-            class="input__firstName" 
-            id="firstName"
-            type="text" 
-            name="firstName" 
-            required
-            [(ngModel)]="userSettings.firstName" 
-            #classTest="ngModel" 
-            
-            />
-    </div>
-    <div class="form form__group">
-        <label for="name">Password</label>
-        <input id="name" type="text" name="password" [(ngModel)]="userSettings.password"/>
-    </div>
-    <div class="form form__group">
-        <label for="name">Login</label>
-        <input id="name" type="text" name="login" [(ngModel)]="userSettings.login"/>
-    </div>
-
-    <button class="btn" type="submit">Click</button>
-
-</form>
+<div>login form</div>>
 
