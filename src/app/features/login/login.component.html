@@ -4,16 +4,16 @@
     <form class="form" (ngSubmit)="save()" [formGroup]="loginForm">
         <div class="form__group form__first-name">
             <label class="form__label" for="firstName">First Name</label>
-            <input class="form__input" type="text" formControlName="firstName" id="firstName"/>
+            <input class="form__input" type="text" formControlName="firstName" id="firstName" required />
             <app-validator [validator]="loginForm"></app-validator>
         </div>
         <div class="form__group form__login">
             <label class="form__label" for="login">Login</label>
-            <input class="form__input" type="text" formControlName="login" id="login"/>
+            <input class="form__input" type="text" formControlName="login" id="login" required />
         </div>
         <div class="form__group form__password">
             <label class="form__label" for="password">Password</label>
-            <input class="form__input" type="password" formControlName="password" id="password"/>
+            <input class="form__input" type="password" formControlName="password" id="password"  required/>
         </div>
 
         <button class="form__submit" type="submit">Submit</button>

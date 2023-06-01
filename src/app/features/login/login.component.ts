@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
-import { Login } from './login';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthValidator } from 'src/app/shared/validators/auth.validator';
 
 @Component({
   selector: 'app-login',
@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
     
     this.loginForm = new FormGroup({
       login: new FormControl<string>(''),
-      password: new FormControl<string>(''),
+      password: new FormControl<string>('', [Validators.required, AuthValidator()]),
       firstName: new FormControl<string>('')
     });
   }
