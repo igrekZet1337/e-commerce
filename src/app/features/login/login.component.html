@@ -1,4 +1,4 @@
-<form #form="ngForm" class="form-template-driven" ngNativeValidate>
+<form #form="ngForm" class="form-template-driven" ngNativeValidate (ngSubmit)="onSubmit(form)">
 
     <div class="form form__group">
         <label for="name">First Name</label>
@@ -10,7 +10,6 @@
             required
             [(ngModel)]="userSettings.firstName" 
             #classTest="ngModel" 
-            [class.field-error]="form.submitted || classTest.invalid"
             
             />
     </div>
@@ -27,6 +26,3 @@
 
 </form>
 
-
-
-{{  classTest.invalid }}
