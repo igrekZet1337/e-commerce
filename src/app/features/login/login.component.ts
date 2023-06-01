@@ -1,34 +1,44 @@
 import { Component, OnInit } from '@angular/core';
-import { Login } from './login';
-import { NgForm } from '@angular/forms';
-import { DataService } from './data.service';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthValidator } from 'src/app/shared/validators/auth.validator';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
+
 export class LoginComponent implements OnInit {
 
-  userSettings: Login = {
-    firstName: '',
-    password: '',
-    login: ''
+  loginForm: FormGroup;
+
+  constructor() {
+    this.loginForm = new FormGroup({
+      login: new FormControl(),
+      password: new FormControl(),
+      firstName: new FormControl()
+    });
   }
-
-  constructor(private dataService: DataService) {
-
-  }
-
-
-
+  
   ngOnInit(): void {
     
+    this.loginForm = new FormGroup({
+      login: new FormControl<string>(''),
+      password: new FormControl<string>('', [Validators.required, AuthValidator()]),
+      firstName: new FormControl<string>('')
+    });
   }
 
-  onSubmit(form: NgForm) {
-    console.log('in onsubmit', form.valid)
-    this.dataService.postUserSettingsForm(this.userSettings).subscribe(result => console.log('success', result), error => console.log('error', error));
+  save() {
+    console.log(this.loginForm)
   }
 
+  populateTestData(): void {
+    this.loginForm.patchValue({
+      firstName: 'Joe Doe',
+      login: 'joedoe',
+      password: 'xyz'
+    })
+  }
+  
 }

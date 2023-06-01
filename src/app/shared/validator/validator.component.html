@@ -1,0 +1,11 @@
+<div>
+    <span class="error__message" *ngIf="validator.required">
+        This field must be fullfill...
+    </span>
+    <span class="error__message" *ngIf="validator.pristine">
+        This field is empty...
+    </span>
+    <span class="error__message" *ngIf="validator.invalid">
+        This field is invalid
+    </span>
+</div>
