@@ -11,9 +11,15 @@
             <label class="form__label" for="login">Login</label>
             <input class="form__input" type="text" formControlName="login" id="login" required />
         </div>
-        <div class="form__group form__password">
-            <label class="form__label" for="password">Password</label>
-            <input class="form__input" type="password" formControlName="password" id="password"  required/>
+        <div class="form__group form__password-group">
+            <div class="form__group form__password">
+                <label class="form__label" for="password">Password</label>
+                <input class="form__input" type="password" formControlName="password" id="password"  required/>
+            </div>
+            <div class="form__group form__confirm-password">
+                <label class="form__label" for="confirmPassword">Confirm password</label>
+                <input class="form__input" type="password" formControlName="confirmPassword" id="confirmPassword"  required/>
+            </div>
         </div>
 
         <button class="form__submit" type="submit">Submit</button>

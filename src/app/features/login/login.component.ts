@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
     this.loginForm = new FormGroup({
       login: new FormControl(),
       password: new FormControl(),
+      confirmPassword: new FormControl(),
       firstName: new FormControl()
     });
   }
@@ -24,7 +25,10 @@ export class LoginComponent implements OnInit {
     
     this.loginForm = new FormGroup({
       login: new FormControl<string>(''),
-      password: new FormControl<string>('', [Validators.required, AuthValidator()]),
+      passwordGroup: new FormGroup({
+        password: new FormControl<string>('', [Validators.required, AuthValidator()]),
+        confirmPassword: new FormControl<string>('', [Validators.required, AuthValidator()]),
+      }),
       firstName: new FormControl<string>('')
     });
   }
