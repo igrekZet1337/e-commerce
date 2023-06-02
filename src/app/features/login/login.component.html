@@ -22,6 +22,14 @@
             </div>
         </div>
 
+        <div class="form__group form__notification" >
+            <p>Send Notifications</p>
+            <label class="form__label" for="notificationEmail">E-mail</label>
+            <input class="form__input" type="radio" name="notification" formControlName="notification" id="notificationEmail" value="Email" />
+            <label class="form__label" for="notificationTxt">Text</label>
+            <input class="form__input" type="radio" name="notification" formControlName="notification" id="notificationTxt" value="Txt" />
+        </div>
+
         <button class="form__submit" type="submit">Submit</button>
         <button class="form__submit" type="submit" (click)="populateTestData()">Test Data</button>
     </form>

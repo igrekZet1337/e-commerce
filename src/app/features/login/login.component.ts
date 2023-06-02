@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { debounceTime, distinctUntilChanged, throttleTime } from 'rxjs';
 import { confirmPassword } from 'src/app/shared/validators/auth.validator';
 
 @Component({
@@ -15,9 +16,12 @@ export class LoginComponent implements OnInit {
   constructor() {
     this.loginForm = new FormGroup({
       login: new FormControl(),
-      password: new FormControl(),
-      confirmPassword: new FormControl(),
-      firstName: new FormControl()
+      passwordGroup: new FormGroup({
+        password: new FormControl(),
+        confirmPassword: new FormControl(),
+      }),
+      firstName: new FormControl(),
+      sendNotifications: new FormControl(),
     });
   }
   
@@ -29,8 +33,12 @@ export class LoginComponent implements OnInit {
         password: new FormControl<string>('', [Validators.required]),
         confirmPassword: new FormControl<string>('', [Validators.required]),
       }, confirmPassword),
-      firstName: new FormControl<string>('')
+      firstName: new FormControl<string>(''),
+      notification: new FormControl<string>('Email')
     });
+
+
+    this.loginForm.get('notification')?.valueChanges.pipe().subscribe(result => console.log(result));
   }
 
   save() {
