@@ -30,6 +30,24 @@
             <input class="form__input" type="radio" name="notification" formControlName="notification" id="notificationTxt" value="Txt" />
         </div>
 
+        <div class="form__group form__duplication" formGroupName="addressGroup">
+            <div class="form__address--1">
+                <label for="form__input--address--1">Address 1</label>
+                <input type="text" formArrayName="inputAddress1" id="form__input--address--1" />
+            </div>
+            <div class="form__address--2">
+                <label for="form__input--address--2">Address 2</label>
+                <input type="text" formArrayName="inputAddress2" id="form__input--address--2" />
+            </div>
+            <div class="form__state">
+                <label for="form__input--state">State</label>
+                <input type="text" formArrayName="inputState" id="form__input--state" />
+            </div>
+
+            <button type="button">Add new address</button>
+            
+        </div>
+
         <button class="form__submit" type="submit">Submit</button>
         <button class="form__submit" type="submit" (click)="populateTestData()">Test Data</button>
     </form>
