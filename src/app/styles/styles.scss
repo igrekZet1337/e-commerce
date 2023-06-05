@@ -1,1 +1,7 @@
-@import url('./helpers/_variables.scss');
+@use './helpers';
+
+
+
+* {
+    color: helpers.$orange
+}
