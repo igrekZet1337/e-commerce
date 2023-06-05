@@ -1,21 +1,15 @@
 import { NgModule } from "@angular/core";
-import { ValidatorComponent } from "./validator/validator.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
 
 @NgModule({
-    declarations: [
-        ValidatorComponent
-    ],
+    declarations: [],
     imports: [
         CommonModule,
         ReactiveFormsModule,
         FormsModule
     ],
-    exports: [
-        ValidatorComponent
-    ]
-
+    exports: []
 })
 
 export class SharedModule {}
