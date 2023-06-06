@@ -2,20 +2,20 @@
 
 Here I build application, where I use a lot of features, what's can give me angular like: **Reactive Forms, DI, Patterns, Http-interceptors, etc.**
 
-**This app it will be contain: **
+**This app it will be contain:**
     - Auth (Auth0 || JWT - I choose what's better), 
     - Register, Login, Logout user from app,
     - Modify own personal data,
     - Delete own account,
-    - Restriction access (Admin, User, No-Login),
-    
+    - Restriction access (Admin, User, No-Login), 
+    ________________________________________________
     - Car's auctions,
     - Detail informations about car's auctions,
     - Search Car's auction,
     - Catalog of car's auctions,
     - carousel with random car's auction,
     - Possibility to add, modify, delete auctions
-
+    ________________________________________________
     - Loan Calculator
     - Contact,
     - Abous us,
