@@ -1,1 +1,0 @@
-In this folder, we put static components like navbar, footer

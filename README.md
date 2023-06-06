@@ -1,4 +1,28 @@
-<<<<<<< HEAD
+# MOTORTRADE E-commerce.
+
+Here I build application, where I use a lot of features, what's can give me angular like: **Reactive Forms, DI, Patterns, Http-interceptors, etc.**
+
+**This app it will be contain: **
+    - Auth (Auth0 || JWT - I choose what's better), 
+    - Register, Login, Logout user from app,
+    - Modify own personal data,
+    - Delete own account,
+    - Restriction access (Admin, User, No-Login),
+    
+    - Car's auctions,
+    - Detail informations about car's auctions,
+    - Search Car's auction,
+    - Catalog of car's auctions,
+    - carousel with random car's auction,
+    - Possibility to add, modify, delete auctions
+
+    - Loan Calculator
+    - Contact,
+    - Abous us,
+    - 404 Page,
+    - Cars comparision
+
+
 # ECommerce
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
@@ -26,7 +50,3 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-=======
-# e-commerce
-e-commerce
->>>>>>> 7012aaafbad0f8e3d659030c2e76ab75515cae0b
