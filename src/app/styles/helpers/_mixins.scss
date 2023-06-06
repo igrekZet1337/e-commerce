@@ -1,0 +1,30 @@
+@use './variables' as var;
+
+@mixin header-std-transform {
+    font-size: 0.75em;
+    padding: 0 2px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+@mixin remove-outline-link {
+    text-decoration: none;
+    padding: 0 2px;
+    color: var.$white;
+}
+
+@mixin phone-size($size) {
+    font-size: $size;
+    color: var.$white;
+}
+
+@mixin circle-social-icon {
+    font-size: 1.2em;
+    display: inline-block;
+    text-align: center;
+    border-radius: 1em;
+    line-height: 0.8em;
+    width: 1em;
+    box-shadow: 0 0 2px var.$gray;
+    padding: 0.5em 0.5em;
+}
