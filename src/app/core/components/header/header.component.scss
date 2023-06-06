@@ -1,0 +1,125 @@
+@use '../../../styles/helpers';
+
+
+.header {
+    display: flex;
+    flex-direction: column;
+    height: 10em;
+
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        padding: 30px 0;
+
+        &:first-of-type {
+            background-color: helpers.$dark-gray;
+        }
+        &:last-of-type {
+            background-color: helpers.$gray;
+        }
+        
+    }
+
+    &__container {
+        max-width: helpers.$max-width;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > * {
+            padding: 0 15px; 
+        }
+    }
+
+    &__logo {
+        font-family: MS-BOLD;
+        font-size: 2.5em;
+        flex-grow: 3;
+        
+    }
+
+    &__address {
+        @include helpers.header-std-transform;
+        
+        display: flex;
+        max-width: 200px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        flex-grow: 1;
+        align-items: center;
+
+
+        &--paragraph {
+            color: helpers.$white;
+        }
+    }
+
+    &__phone {
+        @include helpers.header-std-transform;
+        
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+
+
+        &--wrapper {
+
+        }
+
+        &--description {
+            text-transform: uppercase;
+        }
+        &--number {
+            @include helpers.phone-size(1.5em);
+        }
+    }
+    &__phones {
+        @include helpers.header-std-transform;
+        
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        > * :only-child{
+            @include helpers.phone-size(1.3em);
+        }
+
+        &--service {
+
+        }
+        &--parts {
+
+        }
+    }
+
+    &__icon {
+        padding: 5px 5px 5px 5px;
+        font-size: 2em;
+
+        &--faFacebook {
+            @include helpers.circle-social-icon;
+        }
+        &--faTwitter {
+            @include helpers.circle-social-icon;
+        }
+        &--faInstagram {
+            @include helpers.circle-social-icon;
+        }
+    }
+    &__social {
+        display: flex;
+        flex-grow: 1;
+    }
+
+    &__link {
+
+        @include helpers.remove-outline-link;
+        
+        &--social {
+            padding: 0 .4em;
+            
+        }
+    }
+}

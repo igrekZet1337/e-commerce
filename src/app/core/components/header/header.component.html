@@ -1,3 +1,31 @@
-<div>
-    <app-navbar></app-navbar>
+<div class="header">
+    <div class="header__wrapper">
+        <div class="header__container">
+            <h1 class="header__logo">motortrade</h1>
+            <address class="header__address">
+                <fa-icon class="header__icon header__icon--faLocationDot" [icon]="faLocationDot"></fa-icon>
+                <p class="header__address--paragraph">4712 Wright Court, Birmingham, Alabama, 35209</p>
+            </address>
+            <div class="header__phone">
+                <fa-icon class="header__icon header__icon--faPhone" [icon]="faPhone"></fa-icon>
+                <div class="header__phone--wrapper">
+                    <p class="header__phone--description">phone</p>
+                    <a class="header__phone--number header__link header__link--tel" href="tel:+1234567890">123-456-7890</a>
+                </div>
+            </div>
+            <div class="header__phones">
+                <p class="header__phones--service">service <a class="header__link header__link--tel" href="tel:+123-4567890">123-456-7890</a></p>
+                <p class="header__phones--parts">parts <a class="header__link header__link--tel" href="tel:+1234567890">123-456-7890</a></p>
+            </div>
+            <div class="header__social">
+                 <!-- ICON INNER ANCHOR! -->
+                <a class="header__link header__link--social" href="#"><fa-icon class="header__icon header__icon--faFacebook" [icon]="faFacebook"></fa-icon></a>
+                <a class="header__link header__link--social" href="#"><fa-icon class="header__icon header__icon--faTwitter" [icon]="faTwitter"></fa-icon></a>
+                <a class="header__link header__link--social" href="#"><fa-icon class="header__icon header__icon--faInstagram" [icon]="faInstagram"></fa-icon></a>
+            </div>
+        </div>
+    </div>
+    <div class="header__wrapper">
+        <app-navbar></app-navbar>
+    </div>
 </div>
