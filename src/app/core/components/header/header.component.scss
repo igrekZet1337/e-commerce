@@ -4,7 +4,7 @@
 .header {
     display: flex;
     flex-direction: column;
-    height: 10em;
+    position:relative;
 
 
     &__wrapper {
@@ -13,9 +13,14 @@
         padding: 30px 0;
 
         &:first-of-type {
+            
             background-color: helpers.$dark-gray;
         }
         &:last-of-type {
+            position: absolute;
+            width: 100%;
+            top: 100%;
+            z-index: 2;
             background-color: helpers.$light-gray;
         }
         
