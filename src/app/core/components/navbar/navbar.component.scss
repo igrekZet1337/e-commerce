@@ -8,6 +8,7 @@
     &__list {
         display: flex;
         justify-content: space-between;
+        min-height: 3em;
 
         &--app {
         }
@@ -16,17 +17,26 @@
     }
 
     &__element {
-        padding: 0 15px;
-
+       
+    
     }
 
     &__link {
         @include helpers.remove-outline-link;
         @include helpers.header-std-transform;
 
+        padding: 0 15px;
+        height: 100%;
+
         display: flex;
+        align-items: center;
         color: helpers.$dark-gray;
         font-weight: 600;
+        transition: background-color .2s;
+
+        &:hover {
+            background-color: rgb(helpers.$orange, 0.7);
+        }
 
         
     }
