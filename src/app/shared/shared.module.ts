@@ -11,7 +11,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
         FormsModule,
         FontAwesomeModule
     ],
-    exports: []
+    exports: [FontAwesomeModule]
 })
 
 export class SharedModule {}
