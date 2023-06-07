@@ -23,12 +23,13 @@
 
     &__container {
         max-width: helpers.$max-width;
-        width: auto;
+        width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
 
         > * {
+
             padding: 0 15px; 
         }
     }
@@ -37,6 +38,7 @@
         font-family: MS-BOLD;
         font-size: 2.5em;
         flex-grow: 3;  
+        padding-left: 0px !important;
     }
 
     &__address {
@@ -109,7 +111,10 @@
     }
     &__social {
         display: flex;
+        justify-content: flex-end;
         flex-grow: 1;
+
+        padding-right: 0px !important;
     }
 
     &__link {
