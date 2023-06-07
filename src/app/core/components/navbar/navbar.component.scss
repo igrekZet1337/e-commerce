@@ -7,20 +7,32 @@
     width: 100%;
     &__list {
         display: flex;
+        justify-content: space-between;
 
         &--app {
-
         }
         &--user {
-
         }
     }
 
     &__element {
+        padding: 0 15px;
 
     }
 
     &__link {
-        @include helpers.remove-outline-link
+        @include helpers.remove-outline-link;
+        @include helpers.header-std-transform;
+
+        display: flex;
+        color: helpers.$dark-gray;
+        font-weight: 600;
+
+        
+    }
+
+    .faLogin {
+        padding-right: 8px;
+        font-size: 1.5em;
     }
 }
