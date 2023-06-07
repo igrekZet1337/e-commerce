@@ -1,0 +1,131 @@
+@use "../../styles//helpers";
+
+@keyframes zoom {
+    0% {
+        transform: scale(1)
+    }
+    100% {
+        transform: scale(1.05)
+    }
+}
+@keyframes unzoom {
+    0% {
+        transform: scale(1.05)
+    }
+    100% {
+        transform: scale(1)
+    }
+}
+
+
+
+.home {    
+  &__jumbotron {
+
+  }
+
+  &__car {
+  }
+  &__gallery {
+    height: 60em;
+  }
+}
+
+.car {
+  &__info {
+    position:absolute;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    max-width: helpers.$max-width;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 3s;
+    
+    background-size: 100% 100%;
+  }
+
+  &--audi {
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  &--volvo {
+  }
+
+  &__heading {
+    font-size: 5em;
+    font-weight: 600;
+    line-height: 1.4em;
+  }
+
+  &__button {
+    border: none;
+    border-bottom: 2px solid royalblue;
+    border-radius: 1em;
+    background-color: helpers.$orange;
+    color: helpers.$white;
+    margin-top: 40px;
+    padding: 15px 20px;
+    transition: background-color .3s;
+
+    &:hover {
+        background-color: rgba(helpers.$light-orange, 1);
+    }
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    & > * {
+      padding: 0 5px;
+    }
+
+    &--description {
+    }
+
+    &--info {
+    }
+
+    &--currency {
+      font-size: 5em;
+      color: helpers.$orange;
+    }
+
+    &--price {
+      font-size: 5em;
+      color: helpers.$orange;
+    }
+
+    &--deliver {
+        display: flex;
+        align-self: flex-start;
+        font-size: 2.5em;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    &--month {
+        display: flex;
+        align-self: flex-start;
+        flex-wrap: wrap;
+        width: 50px;
+        font-size: 1em;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+  }
+}
+
+
+
+.fadeIn {
+    opacity: 1;
+}
+
+.fadeOut {
+    opacity: 0;
+}

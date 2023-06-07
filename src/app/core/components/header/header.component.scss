@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     position:relative;
+    z-index: 2;
 
 
     &__wrapper {
@@ -19,7 +20,7 @@
             position: absolute;
             width: 100%;
             top: 100%;
-            z-index: 2;
+            z-index: auto;
             background-color: helpers.$light-gray;
         }
         

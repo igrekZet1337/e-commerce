@@ -1,9 +1,34 @@
 <main class="home">
-    <div class="home__jumbotron jumbotron">
-        <gallery id='gallery' [thumb]="false" [counter]="false" [imageSize]='"cover"' [autoPlay]="true" [playerInterval]="6000">
-
-            
-        </gallery>
+    <div class="home__jumbotron">
+        <gallery class="home__gallery" id='gallery' [thumb]="false" [counter]="false" [autoPlay]="true" [playerInterval]="6000" [loadingStrategy]="'preload'" [imageSize]='"cover"' [itemTemplate]="carouselCar" (indexChange)="indexObserver($event)"></gallery>
         
+        <ng-template class="home__car car" #carouselCar let-data="data">
+            
+            <div *ngIf="data.id === 'audi'" class="car__info car__info--audi" [ngClass]="currIndex === 0 ? 'fadeIn' : 'fadeOut'">
+                <h1 class="car__heading">New Audi Q8</h1>
+                <div class="car__price--description">
+                    <p class="car__price">
+                        <span class="car__price--currency">$</span>
+                        <span class="car__price--price">615</span>
+                        <span class="car__price--deliver">/mo</span>
+                        <span class="car__price--month">for 36 month</span>
+                    </p>
+                </div>
+                <button class="car__button">See more!</button>
+            </div>
+            <div *ngIf="data.id === 'volvo'" class="car__info car__info--volvo" [ngClass]="currIndex === 1 ? 'fadeIn' : 'fadeOut'">
+                <h1 class="car__heading">New Volvo XC90</h1>
+                <div class="car__price--description">
+                    <p class="car__price">
+                        <span class="car__price--currency">$</span>
+                        <span class="car__price--price">554</span>
+                        <span class="car__price--deliver">/mo</span>
+                        <span class="car__price--month">for 48 month</span>
+                    </p>
+                </div>
+                <a href="#" class="car__button">See more!</a>
+            </div>
+            
+        </ng-template>
     </div>
 </main>
