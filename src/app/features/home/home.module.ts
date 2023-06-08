@@ -12,7 +12,11 @@ import { GalleryModule } from 'ng-gallery';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    GalleryModule,
+    GalleryModule.withConfig({
+      loadingStrategy: 'preload',
+      debug: true,
+       
+    }),
   ]
 })
 export class HomeModule { }
