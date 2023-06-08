@@ -1,29 +1,5 @@
 @use "../../styles//helpers";
 
-@keyframes zoom {
-    0% {
-        transform: scale(1)
-    }
-    100% {
-        transform: scale(1.05)
-    }
-}
-@keyframes unzoom {
-    0% {
-        transform: scale(1.05)
-    }
-    100% {
-        transform: scale(1)
-    }
-}
-
-.fetchedClass {
-    border: 10px solid red;
-    animation: zoom 1s infinite alternate;
-}
-
-
-
 .home {    
   &__jumbotron {
 

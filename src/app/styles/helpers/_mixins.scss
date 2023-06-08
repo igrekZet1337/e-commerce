@@ -1,4 +1,5 @@
 @use './variables' as var;
+@use './animations' as animations;
 
 @mixin header-std-transform {
     font-size: 0.75em;
@@ -28,3 +29,4 @@
     box-shadow: 0 0 2px var.$gray;
     padding: 0.5em 0.5em;
 }
+
