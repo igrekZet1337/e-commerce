@@ -7,6 +7,9 @@
     font-family: MS-MEDIUM;
 }
 
-.fetched {
-    animation: zoom 6.2s infinite alternate;
+.zoomIn {
+    animation: zoomIn 10s;
+}
+.zoomOut {
+    animation: zoomOut 2s;
 }

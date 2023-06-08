@@ -1,5 +1,6 @@
-import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import { Gallery, GalleryComponent, GalleryRef, GalleryState, ImageItem } from 'ng-gallery';
+import { of } from 'rxjs';
 
 
 
@@ -19,7 +20,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   
   @ViewChild(GalleryComponent, { read: ElementRef }) galleryHtmlTree: ElementRef<HTMLElement> | undefined
   
-  constructor(private gallery: Gallery, private cdr: ChangeDetectorRef) { }
+  constructor(private gallery: Gallery) { }
   
 
   ngOnInit(): void {
@@ -33,7 +34,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.currIndex = 0;
     this.getTemplateClass(this.currIndex)
     console.log(this.currIndex)
-    this.cdr.detectChanges();
   }
 
   public indexObserver($EVENT: GalleryState | undefined) {
@@ -43,10 +43,13 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   public getTemplateClass(index: number): void {
     const galleryTree: HTMLElement | undefined = this.galleryHtmlTree?.nativeElement;
-    const imgGalleryTree: (NodeListOf<HTMLImageElement>) | undefined = galleryTree?.querySelectorAll('img')
-    imgGalleryTree?.[index].classList.add('fetched')
-    this.cdr.detectChanges();
-    console.log(imgGalleryTree?.[index])
+    const imgGalleryTree: (NodeListOf<HTMLImageElement>) | undefined = galleryTree?.querySelectorAll('img');
+    imgGalleryTree?.forEach((item, i) => {
+      (index === i) ? item.classList.add('zoomIn') : item.classList.remove('zoomIn');
+      (index !== i) ? item.classList.add('zoomOut') : item.classList.remove('zoomOut');
+    });
+
+    console.log(imgGalleryTree)
     console.log()
 
   }
