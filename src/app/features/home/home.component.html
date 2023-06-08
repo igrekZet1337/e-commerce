@@ -1,6 +1,6 @@
 <main class="home">
     <div class="home__jumbotron">
-        <gallery class="home__gallery" id='gallery' [thumb]="false" [counter]="false" [autoPlay]="true" [playerInterval]="6000" [loadingStrategy]="'preload'" [imageSize]='"cover"' [itemTemplate]="carouselCar" (indexChange)="indexObserver($event)"></gallery>
+        <gallery class="home__gallery" id='gallery' fluid [thumb]="false" [counter]="false" [autoPlay]="true" [playerInterval]="6000" [loadingStrategy]="'preload'" [imageSize]='"cover"' [itemTemplate]="carouselCar"  (indexChange)="indexObserver($event)"></gallery>
         
         <ng-template class="home__car car" #carouselCar let-data="data">
             
