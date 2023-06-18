@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { Observable, map, of } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-root',
+  selector: 'mt-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
@@ -11,7 +11,7 @@ export class AppComponent {
 
   constructor() {}
 
-  
+
 
   ngOnInit() {
     const obs$ = fromTimestamp();
