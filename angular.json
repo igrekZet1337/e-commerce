@@ -6,13 +6,15 @@
     "e-commerce": {
       "projectType": "application",
       "schematics": {
+        "@schematics/angular:application": {
+          "prefix": "mt"
+        },
         "@schematics/angular:component": {
           "style": "scss"
         }
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
