@@ -20,6 +20,10 @@ const routes: Routes = [
     loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule)
   },
   {
+    path: 'auctions',
+    loadChildren: () => import('./features/auctions/auctions.module').then(m => m.AuctionsModule)
+  },
+  {
     path: 'settings',
     loadChildren: () => import('./features/settings/settings.module').then(m => m.SettingsModule)
   }
