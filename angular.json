@@ -10,8 +10,12 @@
           "prefix": "mt"
         },
         "@schematics/angular:component": {
-          "style": "scss"
-        }
+          "style": "scss",
+          "prefix": "mt"
+        },
+        "@schematics/angular:directive": {
+          "prefix": "mt"
+        },
       },
       "root": "",
       "sourceRoot": "src",
