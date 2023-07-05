@@ -13,4 +13,5 @@ export class HeaderComponent {
   faFacebook = faFacebook
   faTwitter = faTwitter
   faInstagram = faInstagram
+  icon: any;
 }
